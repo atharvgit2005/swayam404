@@ -1,17 +1,29 @@
 /**
  * swayam404 — Neo-Brutalist Official Product Logic & Simulator Engine
  * Powers the interactive in-page extension emulator, quiz auto-marker,
- * provider toggle, theme switch, and FAQ accordion.
+ * provider toggle, theme switch, FAQ accordion, mobile navigation drawer,
+ * and Lucide icon rendering.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initSimulator();
   initFaqAccordion();
+  initMobileMenu();
+  refreshLucideIcons();
 });
 
 /* ==========================================================================
-   1. Theme Management (Brutalist Light Cream vs Brutalist Dark)
+   1. Lucide Icons Helper
+   ========================================================================== */
+function refreshLucideIcons() {
+  if (window.lucide && typeof window.lucide.createIcons === 'function') {
+    window.lucide.createIcons();
+  }
+}
+
+/* ==========================================================================
+   2. Theme Management (Brutalist Light Cream vs Brutalist Dark)
    ========================================================================== */
 function initTheme() {
   const savedTheme = localStorage.getItem('swayam404_theme') || 'light';
@@ -25,12 +37,13 @@ function initTheme() {
       document.documentElement.setAttribute('data-theme', next);
       localStorage.setItem('swayam404_theme', next);
       showToast(`Switched to ${next.toUpperCase()} mode!`);
+      refreshLucideIcons();
     });
   }
 }
 
 /* ==========================================================================
-   2. Interactive SWAYAM Extension Simulator
+   3. Interactive SWAYAM Extension Simulator
    ========================================================================== */
 function initSimulator() {
   const QUIZ_BANK = [
@@ -160,7 +173,7 @@ function initSimulator() {
       if (correctLabel) correctLabel.classList.add('marked-correct');
 
       logMessage(`<span style="color: #10b981; font-weight: bold;">[SUCCESS] Radio marked via React input descriptor! Submit button untouched (Canteen Safety Rule).</span>`);
-      showToast('✅ Answers filled! Review and submit manually.');
+      showToast('Answers filled! Review and submit manually.');
     });
   }
 
@@ -177,29 +190,88 @@ function initSimulator() {
 }
 
 /* ==========================================================================
-   3. FAQ Accordion
+   4. FAQ Accordion
    ========================================================================== */
 function initFaqAccordion() {
   const items = document.querySelectorAll('.faq-item');
   items.forEach(item => {
     const q = item.querySelector('.faq-question');
     const a = item.querySelector('.faq-answer');
+    const chevron = item.querySelector('.faq-chevron');
     if (q && a) {
       q.addEventListener('click', () => {
-        const isHidden = a.style.display === 'none';
+        const isHidden = a.style.display === 'none' || a.style.display === '';
+        
         // Close others
         items.forEach(other => {
           const otherA = other.querySelector('.faq-answer');
+          const otherChevron = other.querySelector('.faq-chevron');
           if (otherA) otherA.style.display = 'none';
+          if (otherChevron) otherChevron.style.transform = 'rotate(0deg)';
         });
-        a.style.display = isHidden ? 'block' : 'none';
+
+        if (isHidden) {
+          a.style.display = 'block';
+          if (chevron) chevron.style.transform = 'rotate(180deg)';
+        } else {
+          a.style.display = 'none';
+          if (chevron) chevron.style.transform = 'rotate(0deg)';
+        }
       });
     }
   });
 }
 
 /* ==========================================================================
-   4. Brutalist Toast Notification
+   5. Mobile Navigation Drawer
+   ========================================================================== */
+function initMobileMenu() {
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const drawer = document.getElementById('mobileNavDrawer');
+  if (!menuBtn || !drawer) return;
+
+  function toggleMenu(open) {
+    const shouldOpen = open !== undefined ? open : !drawer.classList.contains('open');
+    if (shouldOpen) {
+      drawer.classList.add('open');
+      menuBtn.innerHTML = '<i data-lucide="x" style="width: 18px; height: 18px;"></i>';
+      menuBtn.setAttribute('aria-expanded', 'true');
+    } else {
+      drawer.classList.remove('open');
+      menuBtn.innerHTML = '<i data-lucide="menu" style="width: 18px; height: 18px;"></i>';
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }
+    refreshLucideIcons();
+  }
+
+  menuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  // Close when clicking any navigation link
+  const links = drawer.querySelectorAll('.mobile-nav-link, .mobile-drawer-cta');
+  links.forEach(l => {
+    l.addEventListener('click', () => toggleMenu(false));
+  });
+
+  // Close when clicking outside drawer
+  document.addEventListener('click', (e) => {
+    if (drawer.classList.contains('open') && !drawer.contains(e.target) && e.target !== menuBtn) {
+      toggleMenu(false);
+    }
+  });
+
+  // Close on Escape key
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.classList.contains('open')) {
+      toggleMenu(false);
+    }
+  });
+}
+
+/* ==========================================================================
+   6. Brutalist Toast Notification
    ========================================================================== */
 function showToast(message) {
   let toast = document.getElementById('brutalToast');
@@ -207,23 +279,23 @@ function showToast(message) {
     toast = document.createElement('div');
     toast.id = 'brutalToast';
     toast.style.cssText = `
-      position: fixed; bottom: 24px; right: 24px; z-index: 9999;
-      background: #ffcc00; color: #1a1a1a; padding: 0.75rem 1.4rem;
+      position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%) translateY(10px);
+      z-index: 9999; background: #ffcc00; color: #1a1a1a; padding: 0.65rem 1.25rem;
       border: 2.5px solid #1a1a1a; font-family: 'Space Grotesk', sans-serif;
-      font-weight: 800; font-size: 0.95rem; box-shadow: 4px 4px 0px #1a1a1a;
-      pointer-events: none; opacity: 0; transform: translateY(10px);
-      transition: opacity 0.2s, transform 0.2s;
+      font-weight: 800; font-size: 0.9rem; box-shadow: 4px 4px 0px #1a1a1a;
+      pointer-events: none; opacity: 0; width: max-content; max-width: calc(100vw - 32px);
+      text-align: center; transition: opacity 0.2s, transform 0.2s;
     `;
     document.body.appendChild(toast);
   }
 
   toast.innerHTML = message;
   toast.style.opacity = '1';
-  toast.style.transform = 'translateY(0)';
+  toast.style.transform = 'translateX(-50%) translateY(0)';
 
   clearTimeout(toast.timeoutId);
   toast.timeoutId = setTimeout(() => {
     toast.style.opacity = '0';
-    toast.style.transform = 'translateY(10px)';
+    toast.style.transform = 'translateX(-50%) translateY(10px)';
   }, 2800);
 }

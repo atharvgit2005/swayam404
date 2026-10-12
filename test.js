@@ -73,7 +73,34 @@ if (listeners.length > 0) {
   console.log('✓ Test 5 Passed: Server API handler operational without network dependency.');
 }
 
+// Test 6: Mobile Web Responsiveness Verification
+if (!css.includes('@media (max-width: 768px)') || !css.includes('.mobile-nav-drawer') || !indexHtml.includes('mobileNavDrawer')) {
+  throw new Error('Mobile responsiveness styles or drawer markup missing');
+}
+if (!js.includes('initMobileMenu')) {
+  throw new Error('app.js missing mobile navigation drawer logic');
+}
+console.log('✓ Test 6 Passed: Mobile web responsiveness, hamburger drawer, and touch targets verified.');
+
+// Test 7: Lucide Icon Pack Verification
+if (!indexHtml.includes('lucide@latest') || !indexHtml.includes('data-lucide')) {
+  throw new Error('index.html missing Lucide bundle or data-lucide attributes');
+}
+const emojiRegex = /(\p{Extended_Pictographic}+)/gu;
+let match;
+const remainingEmojis = [];
+while ((match = emojiRegex.exec(indexHtml)) !== null) {
+  remainingEmojis.push(match[0]);
+}
+if (remainingEmojis.length > 0) {
+  throw new Error(`Found unexpected raw emojis in index.html: ${remainingEmojis.join(', ')}`);
+}
+if (!js.includes('refreshLucideIcons') || !css.includes('[data-lucide]')) {
+  throw new Error('Lucide icon helper or CSS rules missing');
+}
+console.log('✓ Test 7 Passed: Lucide icon pack verified across all components with zero emojis.');
+
 console.log('\n======================================================');
-console.log('🎉 ALL 5 VERIFICATION CHECKS PASSED FOR SWAYAM404 SITE!');
+console.log('🎉 ALL 7 VERIFICATION CHECKS PASSED FOR SWAYAM404 SITE!');
 console.log('======================================================');
 process.exit(0);

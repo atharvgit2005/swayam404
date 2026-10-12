@@ -1,22 +1,12 @@
-# swayam404 — Interactive Developer Portfolio & 404 Multiverse Hub
+# Project: swayam404 — The SWAYAM Assignment Assistant
 
-## Overview
-**swayam404** is an immersive, high-performance web experience built for Swayam Mohanty (Senior Full-Stack & Forward Deployed Engineer). It faithfully reflects the signature dark aesthetic, neon gradients, glassmorphism, and engineering caliber of `swayam.dev` while extending it with an interactive 404 multiverse hub, developer terminal, command palette, tech radar, and playable mini-game.
+## Vision & Overview
+`swayam404` is the official product showcase, simulator, and documentation portal for the open-source Chrome/Brave Extension that bridges weekly SWAYAM/NPTEL assignments to free web sessions of ChatGPT, Claude, and Gemini with zero API keys required.
 
-## Core Pillars
-1. **Signature Visual Identity:**
-   - Deep obsidian background (`#0a0a0a` / `#090d16`) with radial blur-3xl glow orbs (`#6366f1` Indigo, `#8b5cf6` Violet, `#ec4899` Pink).
-   - Glassmorphic card design with subtle 1px border glows and micro-interactions.
-   - Clean Geist-inspired typography, floating tech badges (`React ⚛️`, `TypeScript 💙`, `Node.js 🟢`, `Python 🐍`).
-2. **Interactive 404 Multiverse & Recovery Terminal:**
-   - A playful, deeply technical take on the "404" moniker.
-   - Built-in interactive CLI terminal (`help`, `cat bio.txt`, `skills`, `projects`, `radar`, `ping`, `matrix`, `rescue`).
-   - "Packet Rescue" interactive arcade mini-game built into the 404 zone.
-3. **Comprehensive Professional Showcase:**
-   - Real-world production projects: Agent Lab, TruthLens, Edge Command, SnapCal, DevPulse Blog, Notebook Converter.
-   - Real career timeline: Eltemate / Hogan Lovells (Amsterdam), UT Austin PGP in AI/ML, Travix / Trip.com, Woolf University MS CS, SIXT R&D, Motorola Mobility, Publicis Sapient, NIT Durgapur.
-   - Interactive SVG Tech Radar across 6 engineering axes.
-   - DevPulse tech articles showcase.
-4. **Anytime Offline & Zero-Dependency Execution:**
-   - Self-contained, zero-npm-install-required architecture using modern ES modules, semantic HTML5, Tailwind-compatible CSS design system, and a built-in Node.js HTTP/static server.
-   - Instant startup with `npm start` or `node server.js` anytime on any machine.
+## Key Architecture & Deliverables
+1. **Design System:** Faithful Neo-Brutalist Google Stitch aesthetic: Cream Paper (`#f5f0e8`) / Dark (`#121214`), Signature Yellow (`#ffcc00`), Alert Red (`#e63b2e`), Electric Blue (`#0055ff`), crisp 2.5px borders, and hard brutal shadows (`4px 4px 0px #1a1a1a`).
+2. **Interactive In-Browser Simulator:** Live simulation of the extension hooking into SWAYAM DOM containers, dispatching React synthetic events, and auto-marking radio inputs without submitting.
+3. **The Canteen Rule & Safety Protocols:** Humorous yet strict warnings (WhatsApp rule, attendance law, zero auto-submit guarantee).
+4. **Mobile Web Compatibility:** Dedicated hamburger drawer, touch targets (min 44px), flexible responsive typography, and single-column collapse for all screens down to 320px.
+5. **Lucide Icon Pack Integration:** Clean vector icons replacing all emojis across headers, cards, buttons, badges, and interactive controls.
+6. **Deployment:** Hosted on Vercel Edge (`https://swayam404.vercel.app`) with clean Git source control at `atharvgit2005/swayam404`.

@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2212%22 fill=%22%23ffcc00%22 stroke=%22%231a1a1a%22 stroke-width=%228%22/><text x=%2250%22 y=%2264%22 font-family=%22sans-serif%22 font-size=%2250%22 font-weight=%22900%22 fill=%22%231a1a1a%22 text-anchor=%22middle%22>404</text></svg>">
+  <!-- Lucide Icons Bundle -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -34,17 +36,36 @@
       </nav>
 
       <div class="header-right">
-        <button class="btn-brutal" id="themeToggleBtn" style="padding: 0.5rem 0.75rem; font-size: 0.85rem;" title="Toggle Dark/Light Mode">
-          🌓
+        <button class="btn-brutal" id="themeToggleBtn" style="padding: 0.5rem 0.75rem; font-size: 0.85rem;" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+          <i data-lucide="sun-moon" style="width: 18px; height: 18px;"></i>
         </button>
 
-        <a href="https://github.com/atharvgit2005/swayam404-knowledge" target="_blank" rel="noopener noreferrer" class="btn-brutal btn-brutal-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">
-          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          <span>GitHub Repo</span>
+        <a href="https://github.com/atharvgit2005/swayam404-knowledge" target="_blank" rel="noopener noreferrer" class="btn-brutal btn-brutal-primary header-github-btn" style="padding: 0.5rem 0.9rem; font-size: 0.85rem;" title="GitHub Repo">
+          <i data-lucide="github" style="width: 18px; height: 18px;"></i>
+          <span class="github-btn-text">GitHub</span>
         </a>
+
+        <button class="btn-brutal mobile-hamburger-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+          <i data-lucide="menu" style="width: 20px; height: 20px;"></i>
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- MOBILE SLIDE-DOWN DRAWER -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-drawer-inner">
+      <a href="#simulator" class="mobile-nav-link"><i data-lucide="gamepad-2" style="width: 18px; height: 18px;"></i> Live Demo</a>
+      <a href="#features" class="mobile-nav-link"><i data-lucide="zap" style="width: 18px; height: 18px;"></i> Superpowers</a>
+      <a href="#how-it-works" class="mobile-nav-link"><i data-lucide="clipboard-list" style="width: 18px; height: 18px;"></i> How It Works</a>
+      <a href="#install" class="mobile-nav-link"><i data-lucide="download" style="width: 18px; height: 18px;"></i> 30-Sec Installation</a>
+      <a href="#caution" class="mobile-nav-link" style="color: var(--color-secondary);"><i data-lucide="shield-alert" style="width: 18px; height: 18px;"></i> The Canteen Rule</a>
+      <a href="#faq" class="mobile-nav-link"><i data-lucide="help-circle" style="width: 18px; height: 18px;"></i> FAQ</a>
+      <a href="https://github.com/atharvgit2005/swayam404-knowledge" target="_blank" rel="noopener noreferrer" class="btn-brutal btn-brutal-primary mobile-drawer-cta">
+        <i data-lucide="star" style="width: 18px; height: 18px;"></i> Star on GitHub
+      </a>
+    </div>
+  </div>
 
   <main>
     <!-- HERO SECTION -->
@@ -53,9 +74,9 @@
         <div class="hero-grid">
           <div>
             <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
-              <span class="badge-brutal badge-yellow">⚡ 100% FREE</span>
-              <span class="badge-brutal badge-blue">ZERO API KEYS</span>
-              <span class="badge-brutal badge-green">357 TESTS PASSED</span>
+              <span class="badge-brutal badge-yellow"><i data-lucide="zap" style="width: 14px; height: 14px;"></i> 100% FREE</span>
+              <span class="badge-brutal badge-blue"><i data-lucide="key-round" style="width: 14px; height: 14px;"></i> ZERO API KEYS</span>
+              <span class="badge-brutal badge-green"><i data-lucide="check-circle-2" style="width: 14px; height: 14px;"></i> 357 TESTS PASSED</span>
             </div>
 
             <h1 class="hero-headline">
@@ -68,13 +89,13 @@
 
             <div class="hero-cta-group">
               <a href="#install" class="btn-brutal btn-brutal-primary">
-                📦 Install in 30 Seconds
+                <i data-lucide="download" style="width: 18px; height: 18px;"></i> Install in 30 Seconds
               </a>
               <a href="#simulator" class="btn-brutal">
-                🕹️ Try Live Interactive Demo
+                <i data-lucide="play" style="width: 18px; height: 18px;"></i> Try Live Interactive Demo
               </a>
               <a href="https://github.com/atharvgit2005/swayam404-knowledge" target="_blank" rel="noopener noreferrer" class="btn-brutal btn-brutal-secondary">
-                ⭐ Star on GitHub
+                <i data-lucide="star" style="width: 18px; height: 18px;"></i> Star on GitHub
               </a>
             </div>
           </div>
@@ -95,7 +116,9 @@
               <div style="background: var(--color-surface-container); border: var(--border-thin); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 1rem;">
                 <div class="mono-font" style="font-size: 0.75rem; color: var(--color-on-surface-variant); margin-bottom: 0.25rem;">TARGET PORTAL:</div>
                 <div style="font-weight: 800; font-size: 0.95rem;">onlinecourses.swayam2.ac.in</div>
-                <div class="mono-font" style="font-size: 0.75rem; color: #10b981; font-weight: 700; margin-top: 0.25rem;">✓ Active Quiz Container Hooked</div>
+                <div class="mono-font" style="font-size: 0.75rem; color: #10b981; font-weight: 700; margin-top: 0.25rem; display: flex; align-items: center; gap: 0.35rem;">
+                  <i data-lucide="check" style="width: 14px; height: 14px;"></i> Active Quiz Container Hooked
+                </div>
               </div>
 
               <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-bottom: 1rem;">
@@ -113,7 +136,9 @@
                 > Parsing DOM radio inputs [10/10]<br>
                 > Bridge: ChatGPT Web connected<br>
                 > Auto-marking verified selections...<br>
-                <span style="color: #34d399;">✓ Ready for your human review!</span>
+                <span style="color: #34d399; display: flex; align-items: center; gap: 0.35rem; margin-top: 0.25rem;">
+                  <i data-lucide="check-check" style="width: 14px; height: 14px;"></i> Ready for your human review!
+                </span>
               </div>
             </div>
           </div>
@@ -121,19 +146,21 @@
 
         <!-- BOMBASTIC SIDE EYE / CAUTION BANNER -->
         <div class="caution-banner" id="caution">
-          <div class="caution-icon">👀</div>
+          <div class="caution-icon">
+            <i data-lucide="eye" style="width: 28px; height: 28px;"></i>
+          </div>
           <div>
             <div class="caution-title">
-              ⚠️ CAUTION: THE CANTEEN RULE & SAFETY PROTOCOLS
+              <i data-lucide="alert-triangle" style="width: 22px; height: 22px; vertical-align: -3px; margin-right: 4px;"></i> CAUTION: THE CANTEEN RULE & SAFETY PROTOCOLS
             </div>
             <p style="font-size: 0.95rem; margin-bottom: 0.75rem; font-style: italic;">
               *(Bombastic Side Eye... Criminal Offensive Side Eye)* A serious heart-to-heart before you install:
             </p>
             <ul class="caution-list">
-              <li><strong>The WhatsApp Rule:</strong> Don't ever flex a 100/100 score in the class WhatsApp group where the course TA and professor are admins.</li>
-              <li><strong>The Attendance Law:</strong> If your attendance is 12% and the prof doesn't know your face, submitting flawless graduate-level proofs will raise an eyebrow. Keep it humble.</li>
-              <li><strong>Strict Zero Auto-Submit:</strong> The extension will scan and mark the checkboxes, but <strong>YOU MUST CLICK SUBMIT YOURSELF</strong>. If your Wi-Fi trips at 11:59:59 PM, don't open an angry issue.</li>
-              <li><strong>The Canteen Rule:</strong> If anyone asks where you got this from, you found an unmarked USB pendrive on a bench in the college canteen. You do not know who made it. We do not know you.</li>
+              <li><i data-lucide="alert-circle" style="width: 16px; height: 16px; color: var(--color-secondary);"></i> <div><strong>The WhatsApp Rule:</strong> Don't ever flex a 100/100 score in the class WhatsApp group where the course TA and professor are admins.</div></li>
+              <li><i data-lucide="alert-circle" style="width: 16px; height: 16px; color: var(--color-secondary);"></i> <div><strong>The Attendance Law:</strong> If your attendance is 12% and the prof doesn't know your face, submitting flawless graduate-level proofs will raise an eyebrow. Keep it humble.</div></li>
+              <li><i data-lucide="shield-alert" style="width: 16px; height: 16px; color: var(--color-secondary);"></i> <div><strong>Strict Zero Auto-Submit:</strong> The extension will scan and mark the checkboxes, but <strong>YOU MUST CLICK SUBMIT YOURSELF</strong>. If your Wi-Fi trips at 11:59:59 PM, don't open an angry issue.</div></li>
+              <li><i data-lucide="help-circle" style="width: 16px; height: 16px; color: var(--color-secondary);"></i> <div><strong>The Canteen Rule:</strong> If anyone asks where you got this from, you found an unmarked USB pendrive on a bench in the college canteen. You do not know who made it. We do not know you.</div></li>
             </ul>
           </div>
         </div>
@@ -144,7 +171,7 @@
     <section id="simulator" class="section simulator-section">
       <div class="container">
         <div class="section-header-center">
-          <span class="badge-brutal badge-yellow" style="margin-bottom: 0.5rem;">Interactive Experience</span>
+          <span class="badge-brutal badge-yellow" style="margin-bottom: 0.5rem;"><i data-lucide="sparkles" style="width: 14px; height: 14px;"></i> Interactive Experience</span>
           <h2 class="section-title">Test the Extension <span class="highlight-yellow">Right in Your Browser</span></h2>
           <p class="section-desc">
             Try swayam404 directly on this mock assignment! Watch how it scans the question DOM, switches AI web bridges without API keys, and auto-marks the answer safely.
@@ -160,7 +187,7 @@
                 <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-on-surface-variant); margin-left: 0.5rem;">Points: 1.0</span>
               </div>
               <button class="btn-brutal" id="simNextQuizBtn" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">
-                🔄 Next Quiz
+                <i data-lucide="refresh-cw" style="width: 14px; height: 14px;"></i> Next Quiz
               </button>
             </div>
 
@@ -174,10 +201,10 @@
               </div>
             </div>
 
-            <div style="display: flex; justify-content: space-between; align-items: center; border-top: var(--border-thin); padding-top: 0.75rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: var(--border-thin); padding-top: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
               <span class="mono-font" style="font-size: 0.78rem; color: var(--color-on-surface-variant);">Status: Assignment Open (Due in 3 days)</span>
-              <button class="btn-brutal btn-brutal-secondary" style="padding: 0.45rem 1rem; font-size: 0.85rem;" onclick="showToast('🛡️ Safety Active: Only humans can click submit!')">
-                Submit Assignment (Manual)
+              <button class="btn-brutal btn-brutal-secondary" style="padding: 0.45rem 1rem; font-size: 0.85rem;" onclick="showToast('Safety Active: Only humans can click submit!')">
+                <i data-lucide="shield-check" style="width: 16px; height: 16px;"></i> Submit Assignment (Manual)
               </button>
             </div>
           </div>
@@ -212,15 +239,15 @@
             <!-- Action Buttons -->
             <div class="ext-actions-group">
               <button class="btn-brutal" id="simScanBtn">
-                🔍 1. Scan Quiz DOM
+                <i data-lucide="scan" style="width: 16px; height: 16px;"></i> 1. Scan Quiz DOM
               </button>
               <button class="btn-brutal btn-brutal-tertiary" id="simCopyPromptBtn">
-                📋 2. Copy Prompt
+                <i data-lucide="copy" style="width: 16px; height: 16px;"></i> 2. Copy Prompt
               </button>
             </div>
 
             <button class="btn-brutal btn-brutal-primary" id="simFillAnswersBtn" style="width: 100%;">
-              ⚡ 3. Fill Reviewed Answers
+              <i data-lucide="check-check" style="width: 16px; height: 16px;"></i> 3. Fill Reviewed Answers
             </button>
           </div>
         </div>
@@ -231,7 +258,7 @@
     <section id="features" class="section">
       <div class="container">
         <div class="section-header-center">
-          <span class="badge-brutal badge-yellow" style="margin-bottom: 0.5rem;">Core Architecture</span>
+          <span class="badge-brutal badge-yellow" style="margin-bottom: 0.5rem;"><i data-lucide="cpu" style="width: 14px; height: 14px;"></i> Core Architecture</span>
           <h2 class="section-title">Extension <span class="highlight-yellow">Superpowers</span></h2>
           <p class="section-desc">
             Engineered with deep client-side DOM inspection, offline local storage, and community knowledge sync.
@@ -241,7 +268,9 @@
         <div class="features-grid">
           <!-- 1. Free AI Bridge -->
           <div class="feature-card">
-            <div class="feature-icon-box" style="background: var(--color-primary-container);">🆓</div>
+            <div class="feature-icon-box" style="background: var(--color-primary-container);">
+              <i data-lucide="bot" style="width: 28px; height: 28px; color: #1a1a1a;"></i>
+            </div>
             <h3 class="feature-title">100% Free Web AI Bridge</h3>
             <p class="feature-text">
               Forget paying Sam Altman for OpenAI API credits. Integrates with your existing free browser logins for <strong>ChatGPT Web</strong>, <strong>Claude Web</strong>, and <strong>Gemini Web</strong> with zero key configuration.
@@ -250,7 +279,9 @@
 
           <!-- 2. Precision DOM Marking -->
           <div class="feature-card">
-            <div class="feature-icon-box" style="background: var(--color-secondary-container);">🎯</div>
+            <div class="feature-icon-box" style="background: var(--color-secondary-container);">
+              <i data-lucide="crosshair" style="width: 28px; height: 28px; color: #e63b2e;"></i>
+            </div>
             <h3 class="feature-title">Precision DOM Marking</h3>
             <p class="feature-text">
               Dispatches native React input descriptors to ensure SWAYAM's underlying React event listeners actually register the radio button and checkbox selections.
@@ -259,7 +290,9 @@
 
           <!-- 3. Strict Manual Submission -->
           <div class="feature-card">
-            <div class="feature-icon-box" style="background: var(--color-tertiary-container);">🛡️</div>
+            <div class="feature-icon-box" style="background: var(--color-tertiary-container);">
+              <i data-lucide="shield-check" style="width: 28px; height: 28px; color: #0055ff;"></i>
+            </div>
             <h3 class="feature-title">Strict Submission Immunity</h3>
             <p class="feature-text">
               Never touches the <code>Submit</code> or <code>Save & Submit</code> buttons. You maintain 100% final manual review control before your grades are submitted.
@@ -268,7 +301,9 @@
 
           <!-- 4. GitHub Knowledge Bank Sync -->
           <div class="feature-card">
-            <div class="feature-icon-box" style="background: var(--color-primary-container);">📦</div>
+            <div class="feature-icon-box" style="background: var(--color-primary-container);">
+              <i data-lucide="database" style="width: 28px; height: 28px; color: #1a1a1a;"></i>
+            </div>
             <h3 class="feature-title">GitHub Bank Sync</h3>
             <p class="feature-text">
               Synchronize confirmed question banks directly from public repositories like <code>atharvgit2005/swayam404-knowledge</code>, verified with SHA-256 integrity caching.
@@ -277,7 +312,9 @@
 
           <!-- 5. Feedback Capture -->
           <div class="feature-card">
-            <div class="feature-icon-box" style="background: var(--color-secondary-container);">📸</div>
+            <div class="feature-icon-box" style="background: var(--color-secondary-container);">
+              <i data-lucide="camera" style="width: 28px; height: 28px; color: #e63b2e;"></i>
+            </div>
             <h3 class="feature-title">Graded Feedback Capture</h3>
             <p class="feature-text">
               Harvest portal-confirmed badges, green checkmarks, and <code>Accepted Answers</code> after deadline release to build permanent offline question keys.
@@ -286,7 +323,9 @@
 
           <!-- 6. 12-Week Syllabus Expander -->
           <div class="feature-card">
-            <div class="feature-icon-box" style="background: var(--color-tertiary-container);">📅</div>
+            <div class="feature-icon-box" style="background: var(--color-tertiary-container);">
+              <i data-lucide="calendar" style="width: 28px; height: 28px; color: #0055ff;"></i>
+            </div>
             <h3 class="feature-title">12-Week Syllabus Expander</h3>
             <p class="feature-text">
               Automatically unfolds all collapsed module accordions (Week 0 to Week 12) across the SWAYAM course container to visualize total remaining quizzes.
@@ -300,7 +339,7 @@
     <section id="how-it-works" class="section" style="background: var(--color-surface-container); border-top: var(--border-thick); border-bottom: var(--border-thick);">
       <div class="container">
         <div class="section-header-center">
-          <span class="badge-brutal badge-blue" style="margin-bottom: 0.5rem;">Routine</span>
+          <span class="badge-brutal badge-blue" style="margin-bottom: 0.5rem;"><i data-lucide="list-ordered" style="width: 14px; height: 14px;"></i> Routine</span>
           <h2 class="section-title">The 3-Step <span class="highlight-yellow">Solving Routine</span></h2>
           <p class="section-desc">From blank quiz to reviewed answers in under 60 seconds.</p>
         </div>
@@ -332,11 +371,11 @@
         </div>
 
         <!-- 357 Automated Tests Callout -->
-        <div style="background: var(--color-surface); border: var(--border-thick); border-radius: var(--radius-md); padding: 1.75rem; margin-top: 3rem; box-shadow: var(--shadow-brutal); display: flex; align-items: center; justify-content: space-between; flex-wrap: gap; gap: 1.5rem;">
+        <div class="test-callout-box" style="background: var(--color-surface); border: var(--border-thick); border-radius: var(--radius-md); padding: 1.75rem; margin-top: 3rem; box-shadow: var(--shadow-brutal); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;">
           <div>
             <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">
-              <span class="badge-brutal badge-green">357 TESTS PASSING</span>
-              <span class="badge-brutal badge-yellow">21 TEST SUITES</span>
+              <span class="badge-brutal badge-green"><i data-lucide="check-circle" style="width: 14px; height: 14px;"></i> 357 TESTS PASSING</span>
+              <span class="badge-brutal badge-yellow"><i data-lucide="layers" style="width: 14px; height: 14px;"></i> 21 TEST SUITES</span>
             </div>
             <div style="font-size: 1.15rem; font-weight: 800;">Bulletproof Reliability Across Edge Cases</div>
             <div style="font-size: 0.9rem; color: var(--color-on-surface-variant);">
@@ -355,7 +394,7 @@
     <section id="install" class="section">
       <div class="container">
         <div class="section-header-center">
-          <span class="badge-brutal badge-yellow" style="margin-bottom: 0.5rem;">Quick Setup</span>
+          <span class="badge-brutal badge-yellow" style="margin-bottom: 0.5rem;"><i data-lucide="wrench" style="width: 14px; height: 14px;"></i> Quick Setup</span>
           <h2 class="section-title">Install in <span class="highlight-yellow">30 Seconds</span></h2>
           <p class="section-desc">Works on Google Chrome, Brave, Edge, and all Chromium browsers.</p>
         </div>
@@ -378,13 +417,13 @@
               <li>Toggle on <strong>"Developer mode"</strong> in the top-right corner.</li>
               <li>Click <strong>"Load unpacked"</strong> (top-left button).</li>
               <li>Select the <code>dist/</code> folder inside the project.</li>
-              <li>Pin <strong>swayam404</strong> to your browser toolbar! 📌</li>
+              <li>Pin <strong>swayam404</strong> to your browser toolbar! <i data-lucide="pin" style="width: 16px; height: 16px; vertical-align: -2px;"></i></li>
             </ol>
           </div>
 
           <div style="margin-top: 1.75rem; text-align: center;">
             <a href="https://github.com/atharvgit2005/swayam404-knowledge" target="_blank" rel="noopener noreferrer" class="btn-brutal btn-brutal-primary" style="font-size: 1.05rem; padding: 0.85rem 2rem;">
-              📥 Download from GitHub Repository
+              <i data-lucide="download" style="width: 18px; height: 18px;"></i> Download from GitHub Repository
             </a>
           </div>
         </div>
@@ -395,7 +434,7 @@
     <section id="faq" class="section" style="background: var(--color-surface-container); border-top: var(--border-thick);">
       <div class="container">
         <div class="section-header-center">
-          <span class="badge-brutal badge-red" style="margin-bottom: 0.5rem;">FAQ</span>
+          <span class="badge-brutal badge-red" style="margin-bottom: 0.5rem;"><i data-lucide="help-circle" style="width: 14px; height: 14px;"></i> FAQ</span>
           <h2 class="section-title">Frequently Anticipated <span class="highlight-yellow">Panics</span></h2>
         </div>
 
@@ -403,7 +442,7 @@
           <div class="faq-item">
             <div class="faq-question">
               <span>Do I need to buy an OpenAI API key or Google Cloud account?</span>
-              <span>▼</span>
+              <i data-lucide="chevron-down" class="faq-chevron" style="width: 18px; height: 18px;"></i>
             </div>
             <div class="faq-answer">
               <strong>NO! Absolutely zero API keys are required.</strong> The extension uses your regular browser login for ChatGPT Web, Claude Web, or Gemini Web, plus the open-source GitHub question bank. It costs ₹0.00.
@@ -413,7 +452,7 @@
           <div class="faq-item">
             <div class="faq-question">
               <span>Why didn't the extension submit the quiz for me?</span>
-              <span>▼</span>
+              <i data-lucide="chevron-down" class="faq-chevron" style="width: 18px; height: 18px;"></i>
             </div>
             <div class="faq-answer">
               <strong>Because we care about your graduation.</strong> Auto-submitting without student confirmation is how people accidentally submit empty forms or wrong answers. You have full control. Always verify before you submit.
@@ -423,7 +462,7 @@
           <div class="faq-item">
             <div class="faq-question">
               <span>Does this work on NPTEL and SWAYAM 2.0?</span>
-              <span>▼</span>
+              <i data-lucide="chevron-down" class="faq-chevron" style="width: 18px; height: 18px;"></i>
             </div>
             <div class="faq-answer">
               Yes! It supports <code>onlinecourses.swayam2.ac.in</code> and standard NPTEL portal course containers.
@@ -433,7 +472,7 @@
           <div class="faq-item">
             <div class="faq-question">
               <span>Will SWAYAM detect that I'm using an extension?</span>
-              <span>▼</span>
+              <i data-lucide="chevron-down" class="faq-chevron" style="width: 18px; height: 18px;"></i>
             </div>
             <div class="faq-answer">
               The extension runs standard client-side DOM queries (just like clicking with a mouse). It makes zero unauthorized background API requests to SWAYAM's servers and never harvests authentication cookies.
@@ -478,7 +517,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 swayam404. Built with ☕ and desperation by engineers, for engineers.</div>
+        <div>&copy; 2026 swayam404. Built with <i data-lucide="coffee" style="width: 14px; height: 14px; vertical-align: -2px;"></i> and desperation by engineers, for engineers.</div>
         <div>Deployed on Vercel Edge.</div>
       </div>
     </div>
