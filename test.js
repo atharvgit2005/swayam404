@@ -100,7 +100,23 @@ if (!js.includes('refreshLucideIcons') || !css.includes('[data-lucide]')) {
 }
 console.log('✓ Test 7 Passed: Lucide icon pack verified across all components with zero emojis.');
 
+// Test 8: Direct ZIP Download File & Link Verification
+const zipPath1 = path.join(__dirname, 'public', 'downloads', 'swayam404-extension-v1.0.0.zip');
+const zipPath2 = path.join(__dirname, 'public', 'swayam404-extension.zip');
+if (!fs.existsSync(zipPath1) || !fs.existsSync(zipPath2)) {
+  throw new Error('Direct zip package file missing from public directory');
+}
+const zipStat1 = fs.statSync(zipPath1);
+const zipStat2 = fs.statSync(zipPath2);
+if (zipStat1.size < 100000 || zipStat2.size < 100000) {
+  throw new Error('Direct zip package file appears truncated (< 100KB)');
+}
+if (!indexHtml.includes('/swayam404-extension.zip') || !indexHtml.includes('Direct Download .ZIP')) {
+  throw new Error('index.html missing direct zip download link or labels');
+}
+console.log('✓ Test 8 Passed: Direct extension zip package verified on disk (181KB) and linked in site UI.');
+
 console.log('\n======================================================');
-console.log('🎉 ALL 7 VERIFICATION CHECKS PASSED FOR SWAYAM404 SITE!');
+console.log('🎉 ALL 8 VERIFICATION CHECKS PASSED FOR SWAYAM404 SITE!');
 console.log('======================================================');
 process.exit(0);

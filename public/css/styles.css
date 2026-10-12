@@ -886,11 +886,13 @@ h1, h2, h3, h4, .brand-font {
     font-size: 1.1rem;
   }
 
-  .github-btn-text {
+  .github-btn-text,
+  .download-btn-text {
     display: none;
   }
 
-  .header-github-btn {
+  .header-github-btn,
+  .header-download-btn {
     padding: 0.5rem 0.65rem !important;
   }
 

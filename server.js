@@ -16,6 +16,7 @@ const MIME_TYPES = {
   '.jpg': 'image/jpeg',
   '.jpeg': 'image/jpeg',
   '.ico': 'image/x-icon',
+  '.zip': 'application/zip',
   '.txt': 'text/plain; charset=utf-8'
 };
 

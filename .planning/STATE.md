@@ -11,5 +11,6 @@
 2. **Interactive Simulator:** Functional quiz parser, AI bridge tab selector, and radio input auto-marker.
 3. **Mobile Phone Web Compatibility:** Responsive media queries, slide-down drawer, touch targets, and single-column mobile viewports.
 4. **Lucide Icon Pack:** Integrated across all headers, cards, buttons, badges, and controls with zero emojis.
-5. **GSD Test Suite:** 7 automated verification tests passing 100%.
-6. **Vercel Deployment:** Production deployment configured with static `dist/` pipeline.
+5. **Direct ZIP Download:** Pre-built extension bundle (`swayam404-extension.zip` · 181 KB) hosted directly on the site with zero-build setup guide and GitHub release mirror link.
+6. **GSD Test Suite:** 8 automated verification tests passing 100%.
+7. **Vercel Deployment:** Production deployment configured with static `dist/` pipeline.
