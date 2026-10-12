@@ -4,8 +4,8 @@ const { EventEmitter } = require('events');
 
 // Load files
 const indexPath = path.join(__dirname, 'public', 'index.html');
-const cssPath = path.join(__dirname, 'public', 'styles.css');
-const jsPath = path.join(__dirname, 'public', 'app.js');
+const cssPath = path.join(__dirname, 'public', 'css', 'styles.css');
+const jsPath = path.join(__dirname, 'public', 'js', 'app.js');
 const pkgPath = path.join(__dirname, 'package.json');
 
 console.log('[TEST] Running in-process verification suite for swayam404...');
