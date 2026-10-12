@@ -8,7 +8,7 @@ const cssPath = path.join(__dirname, 'public', 'styles.css');
 const jsPath = path.join(__dirname, 'public', 'app.js');
 const pkgPath = path.join(__dirname, 'package.json');
 
-console.log('[TEST] Running in-process verification suite...');
+console.log('[TEST] Running in-process verification suite for swayam404...');
 
 // Test 1: Check package.json
 const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
@@ -19,30 +19,30 @@ console.log('✓ Test 1 Passed: package.json verified with npm start & swayam404
 
 // Test 2: Check index.html content
 const indexHtml = fs.readFileSync(indexPath, 'utf8');
-if (!indexHtml.includes('Swayam') || !indexHtml.includes('swayam404') || !indexHtml.includes('multiverse')) {
+if (!indexHtml.includes('swayam404') || !indexHtml.includes('SWAYAM Assignment Assistant') || !indexHtml.includes('Canteen Rule')) {
   throw new Error('index.html missing key identifiers');
 }
-if (!indexHtml.includes('Agent Lab') || !indexHtml.includes('TruthLens') || !indexHtml.includes('Edge Command')) {
-  throw new Error('index.html missing featured projects');
+if (!indexHtml.includes('100% Free Web AI Bridge') || !indexHtml.includes('swayam404-knowledge')) {
+  throw new Error('index.html missing extension superpowers or repo link');
 }
-if (!indexHtml.includes('Tech Radar') || !indexHtml.includes('Woolf University') || !indexHtml.includes('UT Austin')) {
-  throw new Error('index.html missing radar or credentials');
+if (!indexHtml.includes('357 TESTS') || !indexHtml.includes('Live Demo')) {
+  throw new Error('index.html missing test count or interactive demo');
 }
-console.log('✓ Test 2 Passed: index.html has complete content, projects, radar & multiverse hub.');
+console.log('✓ Test 2 Passed: index.html has complete neo-brutalist content, simulator & repo links.');
 
 // Test 3: Check styles.css
 const css = fs.readFileSync(cssPath, 'utf8');
-if (!css.includes('--color-primary: #6366f1') || !css.includes('cyberpunk') || !css.includes('ambient-glows')) {
-  throw new Error('styles.css missing required design tokens');
+if (!css.includes('--color-primary-container: #ffcc00') || !css.includes('--shadow-brutal') || !css.includes('btn-brutal')) {
+  throw new Error('styles.css missing required neo-brutalist tokens');
 }
-console.log('✓ Test 3 Passed: styles.css contains dark obsidian, neon glows & themes.');
+console.log('✓ Test 3 Passed: styles.css contains neo-brutalist #ffcc00 yellow & brutal drop shadows.');
 
 // Test 4: Check app.js logic
 const js = fs.readFileSync(jsPath, 'utf8');
-if (!js.includes('initPacketRescueGame') || !js.includes('initTerminal') || !js.includes('initCommandPalette') || !js.includes('initKonamiCode')) {
+if (!js.includes('initSimulator') || !js.includes('ChatGPT Web') || !js.includes('initTheme')) {
   throw new Error('app.js missing interactive systems');
 }
-console.log('✓ Test 4 Passed: app.js contains Packet Rescue arcade, CLI terminal, ⌘K palette & Konami easter egg.');
+console.log('✓ Test 4 Passed: app.js contains in-page interactive quiz simulator & AI bridge emulation.');
 
 // Test 5: Check server.js handler logic directly
 const serverModule = require('./server');
@@ -63,7 +63,6 @@ const res = {
   }
 };
 
-// Dispatch mock request to server request listener
 const listeners = serverModule.listeners('request');
 if (listeners.length > 0) {
   listeners[0](req, res);
@@ -74,7 +73,7 @@ if (listeners.length > 0) {
   console.log('✓ Test 5 Passed: Server API handler operational without network dependency.');
 }
 
-console.log('\n=========================================');
-console.log('🎉 ALL 5 VERIFICATION CHECKS PASSED 100%!');
-console.log('=========================================');
+console.log('\n======================================================');
+console.log('🎉 ALL 5 VERIFICATION CHECKS PASSED FOR SWAYAM404 SITE!');
+console.log('======================================================');
 process.exit(0);
