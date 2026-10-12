@@ -1,0 +1,22 @@
+{
+  "name": "swayam404",
+  "version": "1.0.0",
+  "description": "Interactive Developer Portfolio & 404 Multiverse Hub for Swayam Mohanty",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node test.js"
+  },
+  "keywords": [
+    "portfolio",
+    "swayam-mohanty",
+    "swayam404",
+    "forward-deployed-engineer",
+    "full-stack",
+    "nextjs-theme",
+    "interactive-404"
+  ],
+  "author": "Swayam Mohanty",
+  "license": "MIT"
+}

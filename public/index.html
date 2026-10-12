@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>swayam404 — Swayam Mohanty Portfolio & 404 Multiverse Hub</title>
+  <meta name="description" content="Swayam Mohanty (swayam404) — Forward Deployed Engineer & Full-Stack Architect. Production systems, AI/ML, and resilient distributed architectures.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20y=%220%22%20width=%2232%22%20height=%2232%22><text y=%2224%22 font-size=%2224%22>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- Ambient Glowing Orbs -->
+  <div class="ambient-glows">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="glow-orb glow-orb-3"></div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo-badge">
+        <span class="gradient-text">SM</span>
+        <span class="logo-tag">404</span>
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#multiverse" class="nav-link nav-link-404">⚡ 404 Hub</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#blog" class="nav-link">Articles</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cmd-k-trigger" title="Open Quick Actions (⌘K)">
+          <span class="kbd-badge">⌘K</span>
+          <span>Quick Actions</span>
+        </button>
+
+        <button class="btn-icon" id="themeToggleBtn" title="Toggle Theme (Dark / Cyberpunk / Light)">
+          🌓
+        </button>
+
+        <a href="https://github.com/swayam2k15" target="_blank" rel="noopener noreferrer" class="btn-icon" title="GitHub Profile">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+
+        <a href="https://www.linkedin.com/in/swayam-mohanty-career/" target="_blank" rel="noopener noreferrer" class="btn-icon" title="LinkedIn Profile">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+
+        <button class="btn-icon mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" style="display:none;">
+    <div style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; background: var(--bg-surface); border-bottom: 1px solid var(--border-subtle);">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#multiverse" class="nav-link nav-link-404">⚡ 404 Multiverse Hub</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#blog" class="nav-link">Articles</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="home" class="section hero-section">
+      <!-- Floating Code Tags -->
+      <div class="floating-code floating-code-left">
+        <code>
+          const developer = {<br>
+          &nbsp;&nbsp;name: "Swayam Mohanty",<br>
+          &nbsp;&nbsp;focus: "Forward Deployed",<br>
+          &nbsp;&nbsp;coffee: "required ☕"<br>
+          };
+        </code>
+      </div>
+
+      <div class="floating-code floating-code-right">
+        <code>
+          while (alive) {<br>
+          &nbsp;&nbsp;architect();<br>
+          &nbsp;&nbsp;build();<br>
+          &nbsp;&nbsp;ship();<br>
+          }
+        </code>
+      </div>
+
+      <div class="container">
+        <div class="hero-pill">
+          <span class="status-dot"></span>
+          <span>👋 Amsterdam · Forward Deployed Engineering</span>
+        </div>
+
+        <h1 class="hero-title">
+          Swayam <span class="gradient-text">Mohanty</span>
+        </h1>
+
+        <div class="hero-subtitle">
+          Forward Deployed Engineer · Full-Stack Architect
+        </div>
+
+        <div class="typed-wrapper">
+          <span id="typedRole">Forward Deployed Engineer</span>
+          <span class="cursor-blink">|</span>
+        </div>
+
+        <p class="hero-desc">
+          A full-stack engineer with a decade of experience designing and delivering high-performance web applications across travel, mobility, legal tech, and enterprise domains. Blending deep product engineering with advanced training in AI/ML from UT Austin and an MS in Computer Science from Woolf University.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Let's Connect</a>
+          <a href="#multiverse" class="btn-accent">⚡ Enter 404 Hub</a>
+          <a href="#projects" class="btn-secondary">Explore Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 404 MULTIVERSE HUB & RESCUE CENTER -->
+    <section id="multiverse" class="section multiverse-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Interactive Playground</span>
+          <h2 class="section-title">The <span class="gradient-text">404 Multiverse Hub</span></h2>
+          <p class="section-desc">
+            In software, a 404 isn't just an error — it's an opportunity for resilient engineering, intelligent routing, and playful recovery. Test simulated route failures, play the packet rescue arcade, or explore the edge CLI.
+          </p>
+        </div>
+
+        <div class="multiverse-grid">
+          <!-- Left: Route Simulator & 2D Arcade -->
+          <div class="multiverse-box">
+            <div class="route-tester">
+              <div class="route-tester-title">Simulate Non-Existent Routes</div>
+              <div class="route-pills">
+                <button class="route-pill active" data-route="/quantum-tea">/quantum-tea</button>
+                <button class="route-pill" data-route="/lost-in-code">/lost-in-code</button>
+                <button class="route-pill" data-route="/dangling-pointer">/dangling-pointer</button>
+                <button class="route-pill" data-route="/c2pa-verifier">/c2pa-verifier</button>
+              </div>
+            </div>
+
+            <div class="error-display-card">
+              <div class="error-code-badge">
+                <span>⚠️ HTTP 404 / ANOMALY DETECTED</span>
+              </div>
+              <div class="error-message" id="simulatedErrorMsg">
+                HTTP 418 / 404: I am a teapot trapped in a quantum superposition.
+              </div>
+              <div class="error-route-hint" id="simulatedRouteHint">
+                GET https://swayam.dev/quantum-tea
+              </div>
+              <div style="margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.76rem; color: #10b981;" id="simulatedCoreDump">
+                Status: 404 · Quantum State: Collapsed · Origin: BrewException · Latency: 42ms
+              </div>
+            </div>
+
+            <!-- Arcade Mini-Game -->
+            <div class="arcade-card">
+              <div class="arcade-header">
+                <div class="arcade-title">
+                  <span>🕹️</span>
+                  <span>Packet Rescue (Avoid 404s)</span>
+                </div>
+                <div class="arcade-stats">
+                  <div>Score: <span class="arcade-score" id="gameScore">0</span></div>
+                  <div>Best: <span id="gameHighScore" style="color: #10b981;">0</span></div>
+                </div>
+              </div>
+
+              <canvas id="gameCanvas"></canvas>
+
+              <div class="arcade-controls">
+                <button class="arcade-btn" id="gameStartBtn">Start Game</button>
+                <button class="arcade-btn" id="teleportHomeBtn">🚀 Teleport to Safety</button>
+              </div>
+              <p style="font-size: 0.72rem; color: var(--text-dim); margin-top: 0.5rem;">
+                Catch green [200] packets · Dodge red [404] glitches · Use Arrow keys / Mouse / Touch
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Developer CLI Terminal -->
+          <div class="multiverse-box">
+            <div class="terminal-card">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <div class="terminal-dot dot-red"></div>
+                  <div class="terminal-dot dot-yellow"></div>
+                  <div class="terminal-dot dot-green"></div>
+                </div>
+                <div class="terminal-title">swayam404@edge-node: ~/multiverse</div>
+                <div style="font-size: 0.7rem; color: var(--color-primary); font-family: var(--font-mono);">v1.0.0</div>
+              </div>
+
+              <div class="terminal-body" id="termOutput">
+                <div class="terminal-line">
+                  <span class="term-accent">Welcome to the swayam404 Edge Console.</span>
+                </div>
+                <div class="terminal-line term-dim">
+                  Type <span class="term-cmd">help</span> for a list of available diagnostic commands.
+                </div>
+                <div class="terminal-line term-dim">
+                  Try commands like: <span class="term-cmd">bio</span>, <span class="term-cmd">skills</span>, <span class="term-cmd">projects</span>, <span class="term-cmd">radar</span>, <span class="term-cmd">ping</span>.
+                </div>
+              </div>
+
+              <div class="terminal-input-row">
+                <span class="terminal-prompt">swayam404@edge:~$</span>
+                <input type="text" id="termInput" class="terminal-input" placeholder="Type command here..." autofocus autocomplete="off" spellcheck="false">
+              </div>
+            </div>
+
+            <!-- Terminal Quick Action Pills -->
+            <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.4rem;">
+              <span style="font-size: 0.75rem; color: var(--text-dim); align-self: center; margin-right: 0.3rem;">Quick Run:</span>
+              <button class="route-pill" onclick="document.getElementById('termInput').value='bio'; document.getElementById('termInput').dispatchEvent(new KeyboardEvent('keydown', {'key':'Enter'}));">bio</button>
+              <button class="route-pill" onclick="document.getElementById('termInput').value='projects'; document.getElementById('termInput').dispatchEvent(new KeyboardEvent('keydown', {'key':'Enter'}));">projects</button>
+              <button class="route-pill" onclick="document.getElementById('termInput').value='radar'; document.getElementById('termInput').dispatchEvent(new KeyboardEvent('keydown', {'key':'Enter'}));">radar</button>
+              <button class="route-pill" onclick="document.getElementById('termInput').value='ping'; document.getElementById('termInput').dispatchEvent(new KeyboardEvent('keydown', {'key':'Enter'}));">ping</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get To Know Me</span>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left: Cosmic Avatar with Tech Badges -->
+          <div class="avatar-wrapper">
+            <div class="avatar-ring-outer"></div>
+            <div class="avatar-ring-inner"></div>
+            <div class="avatar-image-container">
+              <div class="avatar-monogram">SM</div>
+            </div>
+            <div class="floating-badge badge-top-right">React ⚛️</div>
+            <div class="floating-badge badge-bottom-left">TypeScript 💙</div>
+            <div class="floating-badge badge-mid-left">Node.js 🟢</div>
+          </div>
+
+          <!-- Right: Bio Content -->
+          <div>
+            <p class="about-text">
+              Over ten years, I've shipped production software that serves millions of users — from Motorola's first in-house consumer app to Trip.com's ML-driven revenue optimization platform to AI-powered legal tech for a Magic Circle law firm.
+            </p>
+            <p class="about-text">
+              My career has been a deliberate progression: <strong>frontend specialist → full-stack engineer → forward deployed solutions engineer</strong> working at the intersection of customer needs and emerging intelligence. I completed the <strong>UT Austin PGP in AI & Machine Learning</strong> and <strong>Woolf University's MS in Computer Science</strong> to formalize this evolution. I translate complex technical capabilities into resilient business software.
+            </p>
+
+            <div class="stats-grid">
+              <div class="stat-box">
+                <div class="stat-num gradient-text">10+</div>
+                <div class="stat-label">Years Exp</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-num gradient-text">Millions</div>
+                <div class="stat-label">Users Served</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-num gradient-text">24+</div>
+                <div class="stat-label">Projects</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-num gradient-text">∞</div>
+                <div class="stat-label">Coffee Cups</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS & TECH RADAR SECTION -->
+    <section id="skills" class="section" style="background: rgba(14, 20, 36, 0.4);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Capabilities & Specializations</span>
+          <h2 class="section-title">Skills & <span class="gradient-text">Tech Radar</span></h2>
+          <p class="section-desc">
+            A comprehensive overview of competencies across frontend, backend, AI/ML, cloud, DevOps, and architectural disciplines.
+          </p>
+        </div>
+
+        <div class="skills-layout">
+          <!-- Left: Categories Grid -->
+          <div class="skills-categories">
+            <!-- Frontend -->
+            <div class="skill-card">
+              <div class="skill-card-header" style="color: #34d399;">
+                <span>⚛️</span>
+                <span>Frontend</span>
+              </div>
+              <div class="skill-pills">
+                <span class="skill-pill">React</span>
+                <span class="skill-pill">Next.js</span>
+                <span class="skill-pill">TypeScript</span>
+                <span class="skill-pill">React Native</span>
+                <span class="skill-pill">Expo</span>
+                <span class="skill-pill">TailwindCSS</span>
+                <span class="skill-pill">Micro Frontends</span>
+                <span class="skill-pill">Framer Motion</span>
+              </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="skill-card">
+              <div class="skill-card-header" style="color: #60a5fa;">
+                <span>⚙️</span>
+                <span>Backend</span>
+              </div>
+              <div class="skill-pills">
+                <span class="skill-pill">Node.js</span>
+                <span class="skill-pill">Python</span>
+                <span class="skill-pill">FastAPI</span>
+                <span class="skill-pill">Express.js</span>
+                <span class="skill-pill">GraphQL</span>
+                <span class="skill-pill">PostgreSQL</span>
+                <span class="skill-pill">Neon</span>
+                <span class="skill-pill">Prisma</span>
+                <span class="skill-pill">Redis</span>
+              </div>
+            </div>
+
+            <!-- AI & ML -->
+            <div class="skill-card">
+              <div class="skill-card-header" style="color: #fbbf24;">
+                <span>🤖</span>
+                <span>AI & Machine Learning</span>
+              </div>
+              <div class="skill-pills">
+                <span class="skill-pill">Generative AI</span>
+                <span class="skill-pill">AI Agents</span>
+                <span class="skill-pill">ReAct Loops</span>
+                <span class="skill-pill">LangChain</span>
+                <span class="skill-pill">RAG</span>
+                <span class="skill-pill">Vector Stores</span>
+                <span class="skill-pill">Deep Neural Nets</span>
+                <span class="skill-pill">NLP</span>
+              </div>
+            </div>
+
+            <!-- Cloud & DevOps -->
+            <div class="skill-card">
+              <div class="skill-card-header" style="color: #22d3ee;">
+                <span>☁️</span>
+                <span>Cloud & DevOps</span>
+              </div>
+              <div class="skill-pills">
+                <span class="skill-pill">AWS</span>
+                <span class="skill-pill">Cloudflare Workers</span>
+                <span class="skill-pill">Durable Objects</span>
+                <span class="skill-pill">Docker</span>
+                <span class="skill-pill">Vercel</span>
+                <span class="skill-pill">Render</span>
+                <span class="skill-pill">GitHub Actions</span>
+                <span class="skill-pill">CI/CD</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive SVG Tech Radar -->
+          <div class="radar-box">
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Proficiency Visualization</h3>
+            <div style="font-size: 0.82rem; color: var(--color-primary); font-family: var(--font-mono); margin-bottom: 1.25rem;">
+              Active: <span id="radarActiveLabel">Frontend</span> (<span id="radarActiveScore">95% Proficiency</span>)
+            </div>
+
+            <svg viewBox="0 0 400 400" class="radar-chart-svg">
+              <!-- Concentric circles -->
+              <circle cx="200" cy="200" r="30" fill="none" stroke="currentColor" stroke-opacity="0.1" stroke-width="1"/>
+              <circle cx="200" cy="200" r="60" fill="none" stroke="currentColor" stroke-opacity="0.1" stroke-width="1"/>
+              <circle cx="200" cy="200" r="90" fill="none" stroke="currentColor" stroke-opacity="0.1" stroke-width="1"/>
+              <circle cx="200" cy="200" r="120" fill="none" stroke="currentColor" stroke-opacity="0.1" stroke-width="1"/>
+              <circle cx="200" cy="200" r="150" fill="none" stroke="currentColor" stroke-opacity="0.1" stroke-width="1"/>
+
+              <!-- Axis lines -->
+              <line x1="200" y1="200" x2="200" y2="50" stroke="currentColor" stroke-opacity="0.15" stroke-width="1"/>
+              <line x1="200" y1="200" x2="330" y2="125" stroke="currentColor" stroke-opacity="0.15" stroke-width="1"/>
+              <line x1="200" y1="200" x2="330" y2="275" stroke="currentColor" stroke-opacity="0.15" stroke-width="1"/>
+              <line x1="200" y1="200" x2="200" y2="350" stroke="currentColor" stroke-opacity="0.15" stroke-width="1"/>
+              <line x1="200" y1="200" x2="70" y2="275" stroke="currentColor" stroke-opacity="0.15" stroke-width="1"/>
+              <line x1="200" y1="200" x2="70" y2="125" stroke="currentColor" stroke-opacity="0.15" stroke-width="1"/>
+
+              <!-- Polygon representation -->
+              <polygon points="200,57.5 304,140 297,256 200,312 96,260 85,134"
+                fill="url(#radarGradient)" fill-opacity="0.35" stroke="url(#radarGradient)" stroke-width="2.5"/>
+
+              <!-- Interactive Points -->
+              <circle class="radar-point" cx="200" cy="57.5" r="7" fill="#6366f1" data-skill="Frontend" data-score="95" style="cursor: pointer;"/>
+              <circle class="radar-point" cx="304" cy="140" r="7" fill="#8b5cf6" data-skill="Backend" data-score="80" style="cursor: pointer;"/>
+              <circle class="radar-point" cx="297" cy="256" r="7" fill="#ec4899" data-skill="DevOps & Cloud" data-score="75" style="cursor: pointer;"/>
+              <circle class="radar-point" cx="200" cy="312" r="7" fill="#14b8a6" data-skill="Databases" data-score="75" style="cursor: pointer;"/>
+              <circle class="radar-point" cx="96" cy="260" r="7" fill="#f59e0b" data-skill="Testing & Verification" data-score="80" style="cursor: pointer;"/>
+              <circle class="radar-point" cx="85" cy="134" r="7" fill="#22c55e" data-skill="Architecture & HLD" data-score="88" style="cursor: pointer;"/>
+
+              <!-- Labels -->
+              <text x="200" y="38" text-anchor="middle" class="radar-label" fill="#6366f1" font-size="11" font-weight="600">Frontend (95%)</text>
+              <text x="350" y="130" text-anchor="middle" class="radar-label" fill="#8b5cf6" font-size="11" font-weight="600">Backend (80%)</text>
+              <text x="345" y="290" text-anchor="middle" class="radar-label" fill="#ec4899" font-size="11" font-weight="600">DevOps (75%)</text>
+              <text x="200" y="375" text-anchor="middle" class="radar-label" fill="#14b8a6" font-size="11" font-weight="600">Database (75%)</text>
+              <text x="45" y="290" text-anchor="middle" class="radar-label" fill="#f59e0b" font-size="11" font-weight="600">Testing (80%)</text>
+              <text x="45" y="130" text-anchor="middle" class="radar-label" fill="#22c55e" font-size="11" font-weight="600">Arch (88%)</text>
+
+              <defs>
+                <linearGradient id="radarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#6366f1"/>
+                  <stop offset="50%" stop-color="#8b5cf6"/>
+                  <stop offset="100%" stop-color="#ec4899"/>
+                </linearGradient>
+              </defs>
+            </svg>
+
+            <!-- Proficiency Progress Bars -->
+            <div class="radar-bars">
+              <div class="radar-bar-item">
+                <span>Frontend</span>
+                <div class="radar-bar-track"><div class="radar-bar-fill" style="width: 95%; background: #6366f1;"></div></div>
+                <span>95%</span>
+              </div>
+              <div class="radar-bar-item">
+                <span>Architecture</span>
+                <div class="radar-bar-track"><div class="radar-bar-fill" style="width: 88%; background: #22c55e;"></div></div>
+                <span>88%</span>
+              </div>
+              <div class="radar-bar-item">
+                <span>Backend</span>
+                <div class="radar-bar-track"><div class="radar-bar-fill" style="width: 80%; background: #8b5cf6;"></div></div>
+                <span>80%</span>
+              </div>
+              <div class="radar-bar-item">
+                <span>DevOps</span>
+                <div class="radar-bar-track"><div class="radar-bar-fill" style="width: 75%; background: #ec4899;"></div></div>
+                <span>75%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Production Implementations</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-desc">
+            A curated showcase of applications spanning autonomous agent loops, media provenance cryptographic chains, edge gateways, and polyglot microservices.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- 1. Agent Lab -->
+          <div class="project-card">
+            <div class="project-preview">
+              <span>🤖</span>
+              <div class="project-badge-featured">⭐ Featured</div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Agent Lab</h3>
+              <p class="project-desc">
+                Educational AI-agent framework implementing the ReAct loop, tool use and memory strategies from scratch — no LangChain or CrewAI — with a FastAPI backend and a React dashboard.
+              </p>
+              <div class="project-infra">⚡ Docker → Render</div>
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">FastAPI</span>
+                <span class="project-tag">React 19</span>
+                <span class="project-tag">Claude</span>
+                <span class="project-tag">PostgreSQL</span>
+              </div>
+              <div class="project-links">
+                <a href="https://agentlab-dmyz.onrender.com/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-demo">Live Demo</a>
+                <span class="project-btn project-btn-disabled">Private Repo</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. TruthLens -->
+          <div class="project-card">
+            <div class="project-preview">
+              <span>🛡️</span>
+              <div class="project-badge-featured">⭐ Featured</div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">TruthLens</h3>
+              <p class="project-desc">
+                Mobile app that creates tamper-proof, timestamped media records using Ed25519 device signing, RFC 3161 trusted timestamps, blockchain anchoring and C2PA credentials to combat deepfakes.
+              </p>
+              <div class="project-infra">⚡ GitHub Pages · CI/CD</div>
+              <div class="project-tags">
+                <span class="project-tag">Flutter</span>
+                <span class="project-tag">Dart</span>
+                <span class="project-tag">Ed25519</span>
+                <span class="project-tag">Polygon</span>
+                <span class="project-tag">C2PA 2.0</span>
+              </div>
+              <div class="project-links">
+                <a href="https://swayam2k15.github.io/truthlens/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-demo">Live Demo</a>
+                <a href="https://github.com/swayam2k15/truthlens" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-code">Code</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Edge Command -->
+          <div class="project-card">
+            <div class="project-preview">
+              <span>⚡</span>
+              <div class="project-badge-featured">⭐ Featured</div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Edge Command</h3>
+              <p class="project-desc">
+                Production-grade API gateway and real-time analytics platform running entirely on the Cloudflare edge — sliding-window rate limiting via Durable Objects, request transformation and live WebSockets.
+              </p>
+              <div class="project-infra">⚡ Cloudflare Edge · 300+ PoPs</div>
+              <div class="project-tags">
+                <span class="project-tag">Workers</span>
+                <span class="project-tag">Durable Objects</span>
+                <span class="project-tag">D1 (SQLite)</span>
+                <span class="project-tag">KV</span>
+                <span class="project-tag">React</span>
+              </div>
+              <div class="project-links">
+                <a href="https://cloud-clarity.pages.dev/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-demo">Live Demo</a>
+                <span class="project-btn project-btn-disabled">Private Repo</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. SnapCal -->
+          <div class="project-card">
+            <div class="project-preview">
+              <span>📸</span>
+              <div class="project-badge-featured">⭐ Featured</div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">SnapCal</h3>
+              <p class="project-desc">
+                Snap a photo of your meal and receive instant calorie and macro estimates powered by Gemini 2.5 Flash vision, with image analysis running at the edge via Deno Supabase Edge Functions.
+              </p>
+              <div class="project-infra">⚡ EAS · iOS / Android / Web</div>
+              <div class="project-tags">
+                <span class="project-tag">React Native</span>
+                <span class="project-tag">Expo</span>
+                <span class="project-tag">Supabase</span>
+                <span class="project-tag">Gemini 2.5</span>
+              </div>
+              <div class="project-links">
+                <a href="https://calorie-snap-peach.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-demo">Live Demo</a>
+                <a href="https://github.com/swayam2k15/calorie-snap" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-code">Code</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. DevPulse Blog -->
+          <div class="project-card">
+            <div class="project-preview">
+              <span>📰</span>
+              <div class="project-badge-featured">⭐ Featured</div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">DevPulse Blog</h3>
+              <p class="project-desc">
+                A curated tech blog exploring the inspiring, untold stories behind the world's biggest companies — billion-dollar blunders, garage-to-glory origins and the engineering learnings hidden in them.
+              </p>
+              <div class="project-infra">⚡ Vercel · ISR + SEO</div>
+              <div class="project-tags">
+                <span class="project-tag">Next.js</span>
+                <span class="project-tag">TypeScript</span>
+                <span class="project-tag">Neon Postgres</span>
+                <span class="project-tag">MDX</span>
+              </div>
+              <div class="project-links">
+                <a href="https://devpulse-blog.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-demo">Live Demo</a>
+                <span class="project-btn project-btn-disabled">Private Repo</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Notebook Converter -->
+          <div class="project-card">
+            <div class="project-preview">
+              <span>📓</span>
+              <div class="project-badge-featured">⭐ Featured</div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Notebook Converter</h3>
+              <p class="project-desc">
+                Polyglot full-stack service converting Jupyter notebooks to polished HTML and PDF — Next.js frontend talking to a Python FastAPI backend running nbconvert and xhtml2pdf.
+              </p>
+              <div class="project-infra">⚡ Vercel + Render</div>
+              <div class="project-tags">
+                <span class="project-tag">Next.js</span>
+                <span class="project-tag">Python</span>
+                <span class="project-tag">FastAPI</span>
+                <span class="project-tag">nbconvert</span>
+              </div>
+              <div class="project-links">
+                <a href="https://notebook-converter.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-demo">Live Demo</a>
+                <a href="https://github.com/swayam2k15/notebook-converter" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-code">Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE & EDUCATION TIMELINE -->
+    <section id="experience" class="section" style="background: rgba(14, 20, 36, 0.4);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Career Milestones</span>
+          <h2 class="section-title">Work Experience & <span class="gradient-text">Education</span></h2>
+          <p class="section-desc">A decade of production engineering across Europe and India.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Eltemate -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <h3 class="timeline-role">Full Stack Developer</h3>
+                <span class="timeline-period">Sep 2025 - Present</span>
+              </div>
+              <div class="timeline-company">Eltemate (Hogan Lovells) · Amsterdam, Netherlands</div>
+              <p class="timeline-desc">
+                Building AI-driven legal tech solutions for clients of Hogan Lovells, one of the world's largest international law firms. Developing scalable full-stack applications with React, Express/Node.js, Prisma ORM, and GraphQL.
+              </p>
+              <div class="timeline-techs">
+                <span class="skill-pill">React</span>
+                <span class="skill-pill">Node.js</span>
+                <span class="skill-pill">Prisma</span>
+                <span class="skill-pill">GraphQL</span>
+                <span class="skill-pill">AI Legal Tech</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- UT Austin -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <h3 class="timeline-role">PGP in AI/ML: Business Applications</h3>
+                <span class="timeline-period">Oct 2025 - May 2026</span>
+              </div>
+              <div class="timeline-company">The University of Texas at Austin · Austin, Texas</div>
+              <p class="timeline-desc">
+                Intensive postgraduate program bridging AI/ML with real-world business strategy. Hands-on expertise in predictive modelling, deep neural networks, natural language processing, and Generative AI.
+              </p>
+              <div class="timeline-techs">
+                <span class="skill-pill">Python</span>
+                <span class="skill-pill">Deep Learning</span>
+                <span class="skill-pill">NLP</span>
+                <span class="skill-pill">Generative AI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Travix -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <h3 class="timeline-role">Senior Software Developer</h3>
+                <span class="timeline-period">May 2022 - Jul 2025</span>
+              </div>
+              <div class="timeline-company">Travix (Trip.com) · Amsterdam, Netherlands</div>
+              <p class="timeline-desc">
+                Led development of ML-powered features on the Extras (DPO) page, built Cancel For Any Reason (CFAR) from scratch, modernized legacy ancillary products, and spearheaded the React 18+ monorepo migration and Micro-Frontends POC.
+              </p>
+              <div class="timeline-techs">
+                <span class="skill-pill">React 18</span>
+                <span class="skill-pill">TypeScript</span>
+                <span class="skill-pill">Micro-Frontends</span>
+                <span class="skill-pill">ML Integration</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Woolf University -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <h3 class="timeline-role">Master's in Computer Science</h3>
+                <span class="timeline-period">Jan 2023 - Jan 2025</span>
+              </div>
+              <div class="timeline-company">Woolf University · Malta</div>
+              <p class="timeline-desc">
+                Master of Science (MS) focusing on Data Structures, DBMS, High-Level and Low-Level System Design (HLD & LLD), Big Data Engineering (Apache Spark, Hive, AWS Redshift), and distributed systems scalability.
+              </p>
+              <div class="timeline-techs">
+                <span class="skill-pill">System Design</span>
+                <span class="skill-pill">Data Engineering</span>
+                <span class="skill-pill">Apache Spark</span>
+                <span class="skill-pill">AWS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- SIXT R&D -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <h3 class="timeline-role">Software Developer 2</h3>
+                <span class="timeline-period">Jan 2021 - Apr 2022</span>
+              </div>
+              <div class="timeline-company">SIXT R&D · Bangalore, India</div>
+              <p class="timeline-desc">
+                Developed critical post-booking features for corporate mobility users across the US and Europe using Micro Frontends with Webpack Module Federation integrated into a React monolith. Led upgrade to React 17.
+              </p>
+              <div class="timeline-techs">
+                <span class="skill-pill">Webpack Federation</span>
+                <span class="skill-pill">React</span>
+                <span class="skill-pill">Mobility Tech</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Motorola Mobility -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <h3 class="timeline-role">Senior Software Developer</h3>
+                <span class="timeline-period">Jul 2019 - Dec 2020</span>
+              </div>
+              <div class="timeline-company">Motorola Mobility (ex-Google, Lenovo) · Bangalore, India</div>
+              <p class="timeline-desc">
+                Built consumer features for Motorola's first in-house application, integrating news, podcasts, and stories across LATAM and US markets. Contributed across React, Java backends, and Android codebases.
+              </p>
+              <div class="timeline-techs">
+                <span class="skill-pill">React</span>
+                <span class="skill-pill">Java</span>
+                <span class="skill-pill">Android</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- NIT Durgapur -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <h3 class="timeline-role">B.Tech in Computer Science</h3>
+                <span class="timeline-period">2012 - 2016</span>
+              </div>
+              <div class="timeline-company">National Institute of Technology Durgapur · India</div>
+              <p class="timeline-desc">
+                Core Computer Science foundations: Data Structures & Algorithms, OS, Compilers, Distributed Systems, Neural Networks, Computer Architecture.
+              </p>
+              <div class="timeline-techs">
+                <span class="skill-pill">DSA</span>
+                <span class="skill-pill">OS</span>
+                <span class="skill-pill">Networking</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEVPULSE ARTICLES SECTION -->
+    <section id="blog" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Thoughts on Code & Design</span>
+          <h2 class="section-title">Latest <span class="gradient-text">Articles</span></h2>
+          <p class="section-desc">Behind-the-scenes stories of billion-dollar architectural decisions and lessons.</p>
+        </div>
+
+        <div class="articles-grid">
+          <!-- Article 1 -->
+          <div class="article-card">
+            <div class="article-top">
+              <div class="article-icon">🧠</div>
+              <div class="article-date">7 min read · Mar 2026</div>
+            </div>
+            <h3 class="article-title">The API That Ate the Company: How Jeff Bezos Accidentally Invented AWS</h3>
+            <p class="article-summary">
+              Explores how a famous 2002 internal Bezos mandate forcing strict service-oriented interfaces accidentally built the foundation for the world's most lucrative cloud platform.
+            </p>
+            <a href="https://devpulse-blog.vercel.app/" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary); font-weight: 600; font-size: 0.88rem; text-decoration: none;">
+              Read on DevPulse →
+            </a>
+          </div>
+
+          <!-- Article 2 -->
+          <div class="article-card">
+            <div class="article-top">
+              <div class="article-icon">🎭</div>
+              <div class="article-date">10 min read · Mar 2026</div>
+            </div>
+            <h3 class="article-title">The Demo That Almost Failed: How the First iPhone Nearly Crashed on Stage</h3>
+            <p class="article-summary">
+              The gripping behind-the-scenes engineering feat of the 2007 iPhone reveal: a delicate sequence of live workarounds that changed personal computing forever.
+            </p>
+            <a href="https://devpulse-blog.vercel.app/" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary); font-weight: 600; font-size: 0.88rem; text-decoration: none;">
+              Read on DevPulse →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section" style="background: rgba(14, 20, 36, 0.4);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+          <p class="section-desc">
+            Have a forward-deployed opportunity, distributed systems challenge, or AI initiative in mind? Let's connect.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-card">
+            <a href="mailto:m.swayams@gmail.com" class="contact-item">
+              <div class="contact-icon-box">✉️</div>
+              <div>
+                <div class="contact-item-title">Email Direct</div>
+                <div class="contact-item-value">m.swayams@gmail.com</div>
+              </div>
+            </a>
+
+            <a href="https://github.com/swayam2k15" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <div class="contact-icon-box">🐙</div>
+              <div>
+                <div class="contact-item-title">GitHub Profile</div>
+                <div class="contact-item-value">github.com/swayam2k15</div>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/swayam-mohanty-career/" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <div class="contact-icon-box">💼</div>
+              <div>
+                <div class="contact-item-title">LinkedIn Network</div>
+                <div class="contact-item-value">in/swayam-mohanty-career</div>
+              </div>
+            </a>
+
+            <div style="padding: 1rem; border-radius: var(--radius-md); background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25); display: flex; align-items: center; gap: 0.75rem;">
+              <span class="status-dot"></span>
+              <span style="font-size: 0.85rem; color: #34d399; font-weight: 500;">Status: Open for Forward Deployed & High-Impact Engineering</span>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label class="form-label" for="contactName">Your Name</label>
+              <input type="text" id="contactName" class="form-input" placeholder="e.g. Satya Nadella" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactEmail">Your Email</label>
+              <input type="email" id="contactEmail" class="form-input" placeholder="name@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactMessage">Message</label>
+              <textarea id="contactMessage" class="form-textarea" rows="4" placeholder="Let's build something extraordinary..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+              Dispatch Message 🚀
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <span class="gradient-text" style="font-weight: 800; font-size: 1.2rem;">SM.404</span>
+        <span>© 2026 Swayam Mohanty. All rights reserved.</span>
+      </div>
+      <div>
+        <span>Crafted with resilient distributed principles & Next.js-inspired theme</span>
+      </div>
+    </div>
+    <div class="konami-hint">
+      🎮 Psst... try the Konami code (↑ ↑ ↓ ↓ ← → ← → B A)
+    </div>
+  </footer>
+
+  <!-- FLOATING QUOTE WIDGET -->
+  <div class="quote-widget" id="quoteWidget">
+    <div class="quote-header">
+      <div class="quote-title">
+        <span>💡</span>
+        <span>Daily Philosophy</span>
+      </div>
+      <div style="display: flex; gap: 4px;">
+        <button class="btn-refresh-quote" id="refreshQuoteBtn" title="Get new quote">↻</button>
+        <button class="btn-refresh-quote" id="closeQuoteBtn" title="Dismiss">✕</button>
+      </div>
+    </div>
+    <div class="quote-body" id="dailyQuoteText">
+      "In software, the most expensive blunders are the ones you build right, but for the wrong problem."
+    </div>
+    <div class="quote-author" id="dailyQuoteAuthor">
+      — Swayam Mohanty
+    </div>
+  </div>
+
+  <!-- COMMAND PALETTE MODAL (⌘K) -->
+  <div class="modal-overlay" id="cmdPaletteModal">
+    <div class="cmd-palette">
+      <input type="text" id="cmdSearchInput" class="cmd-search-input" placeholder="Type a destination or command..." autocomplete="off">
+      <div class="cmd-results-list">
+        <div class="cmd-item" data-action="#home">
+          <span>🏠 Return to Home Base</span>
+          <span class="kbd-badge">#home</span>
+        </div>
+        <div class="cmd-item" data-action="#multiverse">
+          <span>⚡ Enter 404 Multiverse Hub</span>
+          <span class="kbd-badge">#multiverse</span>
+        </div>
+        <div class="cmd-item" data-action="#about">
+          <span>👤 Read About Swayam Mohanty</span>
+          <span class="kbd-badge">#about</span>
+        </div>
+        <div class="cmd-item" data-action="#skills">
+          <span>🎯 Inspect Skills & Tech Radar</span>
+          <span class="kbd-badge">#skills</span>
+        </div>
+        <div class="cmd-item" data-action="#projects">
+          <span>🚀 Explore Featured Projects</span>
+          <span class="kbd-badge">#projects</span>
+        </div>
+        <div class="cmd-item" data-action="#experience">
+          <span>💼 View Career Timeline</span>
+          <span class="kbd-badge">#experience</span>
+        </div>
+        <div class="cmd-item" data-action="#blog">
+          <span>📰 Read DevPulse Articles</span>
+          <span class="kbd-badge">#blog</span>
+        </div>
+        <div class="cmd-item" data-action="#contact">
+          <span>✉️ Dispatch Message</span>
+          <span class="kbd-badge">#contact</span>
+        </div>
+        <div class="cmd-item" data-action="toggle-theme">
+          <span>🌓 Switch Theme Mode</span>
+          <span class="kbd-badge">Theme</span>
+        </div>
+        <div class="cmd-item" data-action="start-game">
+          <span>🕹️ Play Packet Rescue Arcade</span>
+          <span class="kbd-badge">Game</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
