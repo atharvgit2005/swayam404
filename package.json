@@ -1,22 +1,18 @@
 {
   "name": "swayam404",
   "version": "1.0.0",
-  "description": "Interactive Developer Portfolio & 404 Multiverse Hub for Swayam Mohanty",
-  "main": "server.js",
+  "description": "The SWAYAM Assignment Assistant Official Website",
   "scripts": {
+    "build": "mkdir -p dist && cp -r public/* dist/",
     "start": "node server.js",
-    "dev": "node server.js",
     "test": "node test.js"
   },
   "keywords": [
-    "portfolio",
-    "swayam-mohanty",
     "swayam404",
-    "forward-deployed-engineer",
-    "full-stack",
-    "nextjs-theme",
-    "interactive-404"
+    "swayam-assignment-assistant",
+    "nptel",
+    "chrome-extension"
   ],
-  "author": "Swayam Mohanty",
+  "author": "Atharv Paharia",
   "license": "MIT"
 }
