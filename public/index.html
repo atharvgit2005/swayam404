@@ -45,9 +45,9 @@
           <span class="github-btn-text">GitHub</span>
         </a>
 
-        <a href="/swayam404-extension.zip" download="swayam404-extension-v1.0.0.zip" class="btn-brutal btn-brutal-primary header-download-btn" style="padding: 0.5rem 0.9rem; font-size: 0.85rem;" title="Direct Download Extension ZIP (181 KB)">
-          <i data-lucide="file-archive" style="width: 18px; height: 18px;"></i>
-          <span class="download-btn-text">Download .ZIP</span>
+        <a href="https://github.com/atharvgit2005/swayam404-knowledge/releases/download/v1.1.0/Swayam404-Installer-macOS.dmg" id="headerInstallerBtn" class="btn-brutal btn-brutal-primary header-download-btn" style="padding: 0.5rem 0.9rem; font-size: 0.85rem;" title="Download Swayam404 Desktop Installer">
+          <i data-lucide="download" style="width: 18px; height: 18px;"></i>
+          <span class="download-btn-text" id="headerInstallerText">Desktop Installer</span>
         </a>
 
         <button class="btn-brutal mobile-hamburger-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
@@ -66,8 +66,8 @@
       <a href="#install" class="mobile-nav-link"><i data-lucide="download" style="width: 18px; height: 18px;"></i> Installation Guide</a>
       <a href="#caution" class="mobile-nav-link" style="color: var(--color-secondary);"><i data-lucide="shield-alert" style="width: 18px; height: 18px;"></i> The Canteen Rule</a>
       <a href="#faq" class="mobile-nav-link"><i data-lucide="help-circle" style="width: 18px; height: 18px;"></i> FAQ</a>
-      <a href="/swayam404-extension.zip" download="swayam404-extension-v1.0.0.zip" class="btn-brutal btn-brutal-primary mobile-drawer-cta">
-        <i data-lucide="file-archive" style="width: 18px; height: 18px;"></i> Direct Download .ZIP (181 KB)
+      <a href="https://github.com/atharvgit2005/swayam404-knowledge/releases/download/v1.1.0/Swayam404-Installer-macOS.dmg" id="mobileInstallerBtn" class="btn-brutal btn-brutal-primary mobile-drawer-cta">
+        <i data-lucide="download" style="width: 18px; height: 18px;"></i> Download Desktop Installer (v1.1.0)
       </a>
       <a href="https://github.com/atharvgit2005/swayam404-knowledge" target="_blank" rel="noopener noreferrer" class="btn-brutal mobile-drawer-cta" style="margin-top: 0.25rem;">
         <i data-lucide="star" style="width: 18px; height: 18px;"></i> Star on GitHub
@@ -84,7 +84,7 @@
             <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
               <span class="badge-brutal badge-yellow"><i data-lucide="zap" style="width: 14px; height: 14px;"></i> 100% FREE</span>
               <span class="badge-brutal badge-blue"><i data-lucide="key-round" style="width: 14px; height: 14px;"></i> ZERO API KEYS</span>
-              <span class="badge-brutal badge-green"><i data-lucide="check-circle-2" style="width: 14px; height: 14px;"></i> 357 TESTS PASSED</span>
+              <span class="badge-brutal badge-green"><i data-lucide="check-circle-2" style="width: 14px; height: 14px;"></i> 404 TESTS PASSED</span>
             </div>
 
             <h1 class="hero-headline">
@@ -96,23 +96,23 @@
             </p>
 
             <div class="hero-cta-group">
-              <a href="/swayam404-extension.zip" download="swayam404-extension-v1.0.0.zip" class="btn-brutal btn-brutal-primary">
-                <i data-lucide="file-archive" style="width: 18px; height: 18px;"></i> Direct Download .ZIP (v1.0.0)
+              <a href="https://github.com/atharvgit2005/swayam404-knowledge/releases/download/v1.1.0/Swayam404-Installer-macOS.dmg" class="btn-brutal btn-brutal-primary">
+                <i data-lucide="apple" style="width: 18px; height: 18px;"></i> Download for Mac (.DMG)
+              </a>
+              <a href="https://github.com/atharvgit2005/swayam404-knowledge/releases/download/v1.1.0/Swayam404-Installer-Windows.zip" class="btn-brutal btn-brutal-primary" style="background: #38bdf8;">
+                <i data-lucide="monitor" style="width: 18px; height: 18px;"></i> Download for Windows (.ZIP)
               </a>
               <a href="#install" class="btn-brutal">
-                <i data-lucide="download" style="width: 18px; height: 18px;"></i> Setup Guide (30s)
+                <i data-lucide="help-circle" style="width: 18px; height: 18px;"></i> Setup Guide (30s)
               </a>
               <a href="#simulator" class="btn-brutal">
                 <i data-lucide="play" style="width: 18px; height: 18px;"></i> Try Live Demo
               </a>
-              <a href="https://github.com/atharvgit2005/swayam404-knowledge" target="_blank" rel="noopener noreferrer" class="btn-brutal btn-brutal-secondary">
-                <i data-lucide="star" style="width: 18px; height: 18px;"></i> Star on GitHub
-              </a>
             </div>
 
             <div class="mono-font" style="font-size: 0.8rem; color: var(--color-on-surface-variant); margin-top: 0.85rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-              <span class="badge-brutal badge-green" style="font-size: 0.7rem; padding: 0.2rem 0.5rem;"><i data-lucide="check" style="width: 12px; height: 12px;"></i> DIRECT ZIP READY</span>
-              <span>181 KB pre-built extension package · Ready to load unpacked</span>
+              <span class="badge-brutal badge-green" style="font-size: 0.7rem; padding: 0.2rem 0.5rem;"><i data-lucide="check" style="width: 12px; height: 12px;"></i> DESKTOP INSTALLER</span>
+              <span>One-click local app · Unpacks extension & handles 1-click auto-updates</span>
             </div>
           </div>
 
@@ -416,33 +416,36 @@
         </div>
 
         <div class="install-outer-card">
-          <!-- Option 1: Direct ZIP Download (Recommended) -->
+          <!-- Option 1: Desktop Installer App (Recommended) -->
           <div style="background: var(--color-surface-container); border: var(--border-thick); border-radius: var(--radius-sm); padding: 1.5rem; margin-bottom: 2rem;">
             <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
               <div>
                 <span class="badge-brutal badge-yellow" style="font-size: 0.72rem; margin-bottom: 0.35rem;">RECOMMENDED FOR STUDENTS</span>
-                <div style="font-size: 1.35rem; font-weight: 800;">Option 1: Direct Pre-Built Extension (.zip)</div>
+                <div style="font-size: 1.35rem; font-weight: 800;">Option 1: Desktop Installer App (Auto-Updates)</div>
                 <div style="font-size: 0.88rem; color: var(--color-on-surface-variant); margin-top: 0.25rem;">
-                  No terminal, no Node.js, and zero build commands. Download, unzip, and load unpacked directly.
+                  One-click native installer that unpacks the extension into your Downloads, auto-copies the path, and keeps your answer banks synced with 1-click updates.
                 </div>
               </div>
-              <div class="install-btn-group">
-                <a href="/swayam404-extension.zip" download="swayam404-extension-v1.0.0.zip" class="btn-brutal btn-brutal-primary" style="font-size: 1rem; padding: 0.75rem 1.4rem;">
-                  <i data-lucide="file-archive" style="width: 18px; height: 18px;"></i> Direct Download .ZIP (181 KB)
+              <div class="install-btn-group" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="https://github.com/atharvgit2005/swayam404-knowledge/releases/download/v1.1.0/Swayam404-Installer-macOS.dmg" class="btn-brutal btn-brutal-primary" style="font-size: 0.95rem; padding: 0.75rem 1.2rem;">
+                  <i data-lucide="apple" style="width: 18px; height: 18px;"></i> macOS (.DMG)
                 </a>
-                <a href="https://github.com/atharvgit2005/swayam404-knowledge/releases/download/v1.0.0/swayam404-extension-v1.0.0.zip" target="_blank" rel="noopener noreferrer" class="btn-brutal" style="font-size: 0.88rem; padding: 0.75rem 1rem;" title="Download release asset from GitHub">
-                  <i data-lucide="github" style="width: 16px; height: 16px;"></i> GitHub Mirror
+                <a href="https://github.com/atharvgit2005/swayam404-knowledge/releases/download/v1.1.0/Swayam404-Installer-Windows.zip" class="btn-brutal btn-brutal-primary" style="background: #38bdf8; font-size: 0.95rem; padding: 0.75rem 1.2rem;">
+                  <i data-lucide="monitor" style="width: 18px; height: 18px;"></i> Windows (.ZIP)
+                </a>
+                <a href="https://github.com/atharvgit2005/swayam404-knowledge/releases/tag/v1.1.0" target="_blank" rel="noopener noreferrer" class="btn-brutal" style="font-size: 0.88rem; padding: 0.75rem 1rem;" title="View Release on GitHub">
+                  <i data-lucide="github" style="width: 16px; height: 16px;"></i> Releases v1.1.0
                 </a>
               </div>
             </div>
 
             <ol style="margin-left: 1.25rem; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.95rem;">
-              <li>Click <strong>Direct Download .ZIP</strong> above to get <code>swayam404-extension-v1.0.0.zip</code>.</li>
-              <li>Extract / unzip the file anywhere on your computer (e.g., your <code>Downloads</code> folder).</li>
-              <li>Open <strong>Brave</strong> or <strong>Google Chrome</strong> and visit <code>chrome://extensions</code> (or <code>brave://extensions</code>).</li>
+              <li>Download the <strong>Swayam404 Installer</strong> for your OS above and launch it.</li>
+              <li>Click <strong>"Install Extension"</strong>. It saves the unpacked extension into <code>Downloads/swayam404-extension</code> and auto-copies the location.</li>
+              <li>Click <strong>"Open Chrome Extensions"</strong> right from the installer.</li>
               <li>Toggle ON <strong>"Developer mode"</strong> in the top-right corner.</li>
-              <li>Click <strong>"Load unpacked"</strong> in the top-left corner and select the extracted folder.</li>
-              <li>Pin <strong>swayam404</strong> to your browser toolbar! <i data-lucide="pin" style="width: 16px; height: 16px; vertical-align: -2px;"></i></li>
+              <li>Click <strong>"Load unpacked"</strong> (top-left) and select the copied folder.</li>
+              <li>Whenever updates are released, open the installer and click <strong>"Update Extension"</strong> for instant 1-click upgrades!</li>
             </ol>
           </div>
 
@@ -541,8 +544,9 @@
         <div class="footer-col">
           <h4>Downloads & Repos</h4>
           <ul class="footer-links">
-            <li><a href="/swayam404-extension.zip" download="swayam404-extension-v1.0.0.zip" class="footer-link"><i data-lucide="file-archive" style="width: 14px; height: 14px; vertical-align: -2px;"></i> Direct Download .ZIP (v1.0.0)</a></li>
-            <li><a href="https://github.com/atharvgit2005/swayam404-knowledge/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub Release v1.0.0 Asset</a></li>
+            <li><a href="https://github.com/atharvgit2005/swayam404-knowledge/releases/download/v1.1.0/Swayam404-Installer-macOS.dmg" class="footer-link"><i data-lucide="apple" style="width: 14px; height: 14px; vertical-align: -2px;"></i> Download for macOS (DMG)</a></li>
+            <li><a href="https://github.com/atharvgit2005/swayam404-knowledge/releases/download/v1.1.0/Swayam404-Installer-Windows.zip" class="footer-link"><i data-lucide="monitor" style="width: 14px; height: 14px; vertical-align: -2px;"></i> Download for Windows (ZIP)</a></li>
+            <li><a href="https://github.com/atharvgit2005/swayam404-knowledge/releases/tag/v1.1.0" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub Release v1.1.0</a></li>
             <li><a href="https://github.com/atharvgit2005/swayam404-knowledge" target="_blank" rel="noopener noreferrer" class="footer-link">Extension Source (swayam404-knowledge)</a></li>
             <li><a href="https://github.com/atharvgit2005/swayam404" target="_blank" rel="noopener noreferrer" class="footer-link">Website Repository (swayam404)</a></li>
             <li><a href="https://swayam404.vercel.app" class="footer-link">Live Production Site (Vercel)</a></li>
