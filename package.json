@@ -2,6 +2,7 @@
   "name": "swayam404",
   "version": "1.0.0",
   "description": "The SWAYAM Assignment Assistant Official Website",
+  "main": "server.js",
   "scripts": {
     "build": "mkdir -p dist && cp -r public/* dist/",
     "start": "node server.js",
